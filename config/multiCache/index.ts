@@ -9,7 +9,7 @@ const multiCache: NuxtConfig["multiCache"] = {
     enabled: true,
   },
   route: {
-    enabled: false,
+    enabled: true,
   },
   api: {
     enabled: true,
@@ -22,7 +22,7 @@ const multiCache: NuxtConfig["multiCache"] = {
     cacheControlHeader: "CDN-Cache-Control",
     cacheTagHeader: "Cache-Tag",
   },
-  debug: IS_DEV,
+  debug: true,
 };
 
 export default multiCache;
