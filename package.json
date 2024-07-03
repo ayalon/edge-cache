@@ -6,11 +6,22 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
     "nuxt": "^3.12.3",
+    "nuxt-graphql-middleware": "^4.1.0",
+    "nuxt-multi-cache": "^3.2.0",
     "vue": "latest"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^0.3.13",
+    "prettier": "^3.3.2",
+    "wrangler": "^3.63.0"
   }
 }

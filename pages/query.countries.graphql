@@ -1,0 +1,14 @@
+query countryList {
+  countries(filter: { name: { regex: "^S" } }) {
+    code
+    name
+    native
+    capital
+    emoji
+    currency
+    languages {
+      code
+      name
+    }
+  }
+}

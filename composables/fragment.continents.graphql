@@ -1,0 +1,4 @@
+fragment continents on Continent {
+  code
+  name
+}
