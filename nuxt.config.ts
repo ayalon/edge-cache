@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     "nuxt-graphql-middleware",
     "nuxt-multi-cache",
+    "nitro-cloudflare-dev",
     "@nuxt/devtools",
     "@nuxt/eslint",
   ],
