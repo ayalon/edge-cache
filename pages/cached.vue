@@ -56,9 +56,12 @@
 <script setup lang="ts">
 const initData = await useInitData();
 
-// useRouteCache((helper) => {
-//   helper.setMaxAge(3600).setCacheable().addTags(["cache:page"]);
-// });
+console.log("Start Cache");
+
+useRouteCache((helper) => {
+  helper.setMaxAge(3600).setCacheable().addTags(["cache:page"]);
+});
+console.log("End Cache");
 
 const { data: countries } = await useAsyncGraphqlQuery("countryList", null, {
   transform: (v) => v.data.countries,
