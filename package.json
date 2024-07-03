@@ -4,6 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
+    "cloudflare": "NITRO_PRESET=cloudflare nuxt build",
+    "cftest": "NITRO_PRESET=cloudflare nuxt build && wrangler dev",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "lint": "eslint .",

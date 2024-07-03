@@ -9,16 +9,16 @@ export default async function (): Promise<Ref<InitData>> {
 
   // Let's try to fetch the data from the cache first.
   const event = useRequestEvent();
-  const { value, addToCache } = await useDataCache<InitData>("initData", event);
-  if (value) {
-    data.value = value;
-    return data;
-  }
-
-  // If the data is not in the cache, we fetch it from the payload / useState().
-  if (data.value) {
-    return data;
-  }
+  // const { value, addToCache } = await useDataCache<InitData>("initData", event);
+  // if (value) {
+  //   data.value = value;
+  //   return data;
+  // }
+  //
+  // // If the data is not in the cache, we fetch it from the payload / useState().
+  // if (data.value) {
+  //   return data;
+  // }
 
   // Fetch the data from the server.
   data.value = await useGraphqlQuery({
@@ -28,7 +28,7 @@ export default async function (): Promise<Ref<InitData>> {
       continents: v.data.continents || [],
     };
 
-    addToCache(initData, ["init_data"]);
+    //addToCache(initData, ["init_data"]);
 
     return initData;
   });

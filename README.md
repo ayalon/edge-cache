@@ -73,3 +73,23 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+
+## Cloudflare
+```
+npx wrangler login
+npx wrangler kv namespace create edge_cache
+npx wrangler deploy
+```
+
+### Reproduction
+```
+npm run cftest
+```
+
+See file `composables/useinitData.ts` for the code that is causing the issue.
+
+If things are uncommented and no cache is used, it works fine. If the cache is used, it fails.
+
+500
+[nuxt] instance unavailable

@@ -1,0 +1,19 @@
+name = "edge-cache"
+main = "./.output/server/index.mjs"
+workers_dev = true
+compatibility_date = "2023-12-01"
+account_id = "7bc21081116fdeeb0041d28b6e8ce37d"
+routes = [
+	{ pattern = "edge-cache.ayalon.ch", custom_domain = true }
+]
+
+rules = [
+  { type = "ESModule", globs = ["**/*.js", "**/*.mjs"]},
+]
+
+kv_namespaces = [
+  { binding = "edge_cache", id = "14ee5a02a1784f68a187f461cceddb8a" }
+]
+
+[site]
+bucket = ".output/public"

@@ -9,7 +9,7 @@ const multiCache: NuxtConfig["multiCache"] = {
     enabled: true,
   },
   route: {
-    enabled: true,
+    enabled: false,
   },
   api: {
     enabled: true,
